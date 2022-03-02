@@ -1,0 +1,174 @@
+.Container{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 28%;
+    position: relative;
+}
+
+
+.TodoItem , .TodoItemComplete{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: var(--white-color);
+    
+    text-align: center;
+    
+
+
+    
+    border-radius: 10px;
+    height: 110px;
+    
+    font-size: 15px;
+    font-weight: 700;
+
+    
+}
+
+
+.TodoItem {
+    color: var(--black-color);
+    
+    border-right:  4px solid var(--second-color);
+    border-bottom: 4px solid var(--second-color);
+    
+    
+
+    padding: 5px 20px;
+}
+
+.TodoItemComplete {
+    color: rgba(255, 255, 255, .9);
+    background: rgba(77,112,255,.4);
+
+    border-right:  4px solid rgba(255,255,255,.2);
+    border-bottom: 4px solid rgba(255,255,255,.2);
+
+    padding: 5px 20px;
+
+    text-decoration: line-through;
+}
+
+
+.typeTodoGreen, .typeTodoOrange, 
+.typeTodoBlue, .typeTodoRed {
+    
+    padding: 5px 10px;
+    color: var(--white-color);
+    font-size: var(--font-size-ssm);
+    border-radius: 5px;
+}
+
+.typeTodoBlue {
+    background-color: var(--second-color);
+}
+
+.typeTodoGreen {
+    background-color: var(--third-color);
+}
+
+.typeTodoOrange {
+    background-color: var(--orange-color);
+}
+
+.typeTodoRed {
+    background-color: var(--purple-color);
+}
+
+
+
+
+
+
+
+
+.check[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+.check[type="checkbox"] {
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    font: inherit;
+    color: var(--second-color);
+    width: auto;
+    height: auto;
+    border: 0.15em solid var(--second-color);
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+}
+
+.check[type="checkbox"] {
+    display: grid;
+    place-content: center;
+    transform: scale(1.2);
+}
+
+
+.check[type="checkbox"]::before {
+    content: "";
+    width: 0.95em;
+    height: 0.95em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+
+}
+
+.check[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.check[type="checkbox"]::before {
+    /* ...existing styles */
+  
+    /* Windows High Contrast Mode */
+    background-color: var(--green-color);
+}
+
+.check[type="checkbox"]::before {
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.check[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid var(--green-color);
+    outline-offset: max(2px, 0.15em);
+}
+
+
+
+
+.Button {
+    position: absolute;
+    right: -8px;
+    top: -5px;
+
+    border-style: none;
+    background-color: var(--red-color);
+    padding: 5px 8px;
+    border-radius: 30%;
+
+    color: var(--white-color);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    
+}
+
+
+.Button:hover {
+    cursor: pointer;
+
+    background-color: var(--white-color);
+    color: var(--red-color);
+
+    transform: scale(1.1);
+}

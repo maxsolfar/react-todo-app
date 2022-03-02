@@ -1,0 +1,63 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.todoSearch {
+    padding: 15px;
+
+    outline: none;
+
+    background-color: rgb(244, 244, 244);
+    border-style: none;
+    border-radius: 10px;
+    border: 1px solid var(--third-color);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: var(--font-size-md);
+    
+    width: 100%;
+
+
+}
+
+
+
+.Buttons {
+    display: flex;
+    gap: 15px;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5px 0px 0px 0px;
+}
+
+
+
+.Buttons button {
+    transition: .4s ease-in-out;
+    padding: 8px 16px;
+
+    width: auto;
+  
+    border-radius: 10px;
+    border: 1px solid var(--second-color);
+    
+
+    background-color: var(--second-color);
+
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+}
+
+
+
+.Buttons button:hover {
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid var(--white-color);
+}

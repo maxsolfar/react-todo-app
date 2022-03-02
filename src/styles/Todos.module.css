@@ -1,0 +1,16 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+  
+
+    background-color: var(--main-color);
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg);
+    
+    box-shadow: 7px 7px 5px 0px rgba(21,21,21,0.3);
+    border-radius: 15px;
+    border-top: 10px solid var(--second-color);
+
+    padding: 30px 50px;
+    width: 75%;
+    height: auto;
+}
