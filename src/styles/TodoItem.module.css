@@ -131,7 +131,7 @@
     /* ...existing styles */
   
     /* Windows High Contrast Mode */
-    background-color: var(--green-color);
+    background-color: var(--third-color);
 }
 
 .check[type="checkbox"]::before {
@@ -172,3 +172,14 @@
 
     transform: scale(1.1);
 }
+
+
+
+
+
+
+
+
+
+
+

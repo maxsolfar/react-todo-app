@@ -14,25 +14,28 @@ import { TodoContext } from "./TodoContext/index";
 
 
 function Todos() {
-  
-  const {searchTodos, completeTodo, deleteTodo} = React.useContext(TodoContext);
+
+  const {error, loading, searchTodos, completeTodo, deleteTodo} = React.useContext(TodoContext);
 
   return (
 
     <React.Fragment>
 
-      
+
+        
 
         <section className={style.Container}>
-          <TodoCounter
-            /* total={totalTodos}
-            completedTodos={completedTodos}
-            search={search}
-            setSearch={setSearch} */
-          />
+          <TodoCounter/>
 
-         
           <TodoList>
+            {error && <p className={style.Error}>There has been an error, please try again...</p>}
+            {loading && <section className={style.loader}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>}
+            {(!loading && !searchTodos.length) && <p className={style.NewTodo}>¡Create your first Todo!</p>}
+            
             {searchTodos.map((todo) => (
               <TodoItem
                 key={todo.id}

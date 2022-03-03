@@ -5,13 +5,18 @@ const TodoContext = React.createContext();
 
 function TodoProvider(props){
     
-  const [todos, savedTodos] = useLocalStorage('ToDos_V1', []);
+  const {
+    item: todos,
+    savedItem: savedTodos,
+    loading,
+    error
+  } = useLocalStorage('ToDos_V1', []);
 
-  
   const [search, setSearch] = React.useState("");
 
 
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
+
   const totalTodos = todos.length;
 
   /*
@@ -91,6 +96,8 @@ function TodoProvider(props){
   return(
     <TodoContext.Provider
         value={{
+            error,
+            loading,
             searchTodos,
             completeTodo,
             deleteTodo,
